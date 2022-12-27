@@ -1,0 +1,50 @@
+.pagging {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// .pagging__arrow
+	&__arrow {
+		margin: 0 20px;
+		display: flex;
+		align-items: center;
+		&::before {
+			font-size: 12px;
+		}
+		&-next {
+			&::before {
+				order: 1;
+				margin-left: 5px;
+			}
+		}
+		&-prev {
+			&::before {
+				transform: rotate(180deg);
+				margin-right: 5px;
+			}
+		}
+	}
+	// .pagging__list
+	&__list {
+		display: flex;
+		li + li {
+			margin-left: 12px;
+		}
+	}
+	&__item {
+		width: 18px;
+		height: 18px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&._active {
+			background: $orange;
+			color: $white;
+		}
+	}
+	// .pagging__item
+	&__link {
+		font-size: 13px;
+		line-height: 16px;
+	}
+}

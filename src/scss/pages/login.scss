@@ -1,0 +1,288 @@
+.login {
+	&__title {
+		font-weight: 500;
+		font-size: 36px;
+		line-height: 44px;
+		padding-top: 40px;
+	}
+}
+
+.popauth {
+	/* .popauth__desktop */
+	&__desktop {
+	}
+	/* .popauth__logo */
+	&__logo {
+		margin: 0 auto;
+		text-align: center;
+		width: 300px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+	/* .popauth__descr */
+	&__descr {
+		display: none;
+		@media (min-width: $mobile) {
+			display: block;
+			margin-top: 8px;
+			font-size: 14px;
+			line-height: 17px;
+			text-align: center;
+			color: #8a8aa0;
+			span {
+				font-weight: 700;
+				color: $orange;
+				text-decoration-line: underline;
+			}
+			@media (min-width: $mobile) {
+				font-size: 20px;
+				line-height: 150%;
+				color: #171717;
+				span {
+					font-weight: 700;
+					color: #171717;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	/* .popauth__tabs */
+	&__tabs {
+	}
+	/* .popauth__tabs-navigation */
+	&__tabs-navigation {
+		margin: 36px auto 0 auto;
+		border-bottom: 1px solid rgba(23, 23, 23, 0.12);
+		display: flex;
+		width: max-content;
+		justify-content: space-between;
+	}
+	/* .popauth__tabs-title */
+	&__tabs-title {
+		white-space: nowrap;
+		font-size: 18px;
+		line-height: 125%;
+		color: #78828c;
+		padding-bottom: 24px;
+		padding-left: 25px;
+		padding-right: 25px;
+
+		&._tab-active {
+			color: #171717;
+			position: relative;
+			&::before {
+				content: '';
+				width: 100%;
+				height: 4px;
+				background: $orange;
+				left: 0;
+				bottom: 0;
+				position: absolute;
+			}
+		}
+		&.auth-title {
+			span {
+				display: none;
+				@media (min-width: $mobile) {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	/* .popauth__tabs-content */
+	&__tabs-content {
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+		@media (min-width: $mobile) {
+			display: block;
+		}
+	}
+	/* .popauth__tabs-body */
+	&__tabs-body {
+		max-width: 423px;
+	}
+	/* .popauth__reg */
+	&__reg {
+	}
+	/* .popauth__signin */
+	&__signin {
+	}
+}
+.reg {
+	margin: 0 auto;
+	&__title {
+		margin-top: 36px;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 29px;
+		color: #212121;
+		text-align: center;
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+	&__descr {
+		text-align: center;
+		margin-top: 8px;
+		font-size: 14px;
+		line-height: 17px;
+		text-align: center;
+		color: #8a8aa0;
+		span {
+			text-decoration-line: underline;
+			color: $orange;
+		}
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+	/* .reg__form */
+	&__form {
+		margin-top: 24px;
+	}
+	/* .reg__inner */
+	&__inner {
+		margin-top: 8px;
+		font-size: 16px;
+		line-height: 150%;
+		color: #717171;
+		li {
+			display: flex;
+			align-items: center;
+			&::before {
+				margin-right: 8px;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background: #c0c0c0;
+				font-size: 8px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			&:first-child {
+				&::before {
+					background: #04af00;
+				}
+			}
+			& + li {
+				margin-top: 8px;
+			}
+		}
+	}
+	/* .reg__submit */
+	&__submit {
+		margin-top: 20px;
+		height: 52px;
+		width: 100%;
+		border-radius: 10px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 125%;
+	}
+	/* .reg__next */
+	&__next {
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+	/* .reg__back */
+	&__back {
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+	/* .reg__signin */
+	&__signin {
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+	/* .reg__policy */
+	&__policy {
+		margin-top: 20px;
+		font-size: 16px;
+		line-height: 125%;
+		text-align: center;
+		color: #78828c;
+		a {
+			text-decoration-line: underline;
+			color: #212121;
+		}
+	}
+}
+
+.signin {
+	margin: 0 auto;
+	&__title {
+		margin-top: 36px;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 29px;
+		color: #212121;
+		text-align: center;
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+	&__descr {
+		text-align: center;
+		margin-top: 8px;
+		font-size: 14px;
+		line-height: 17px;
+		text-align: center;
+		color: #8a8aa0;
+		span {
+			text-decoration-line: underline;
+			color: $orange;
+		}
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+	/* .signin__form */
+	&__form {
+		margin-top: 24px;
+	}
+	/* .signin__inner */
+	&__inner {
+		color: #171717;
+		font-size: 15px;
+		line-height: 150%;
+		margin-top: 8px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	/* .signin__rememberme */
+	&__rememberme {
+	}
+	/* .signin__remindpass */
+	&__remindpass {
+	}
+	/* .signin__submit */
+	&__submit {
+		width: 100%;
+		margin-top: 20px;
+		border-radius: 10px;
+		height: 52px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 125%;
+	}
+}
+.checkbox {
+	/* .checkbox__input */
+	&__input {
+	}
+	/* .checkbox__label */
+	&__label {
+	}
+	/* .checkbox__text */
+	&__text {
+	}
+}

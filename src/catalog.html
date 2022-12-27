@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{ "title":"Каталог" })
+
+	<body id="up">
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page catalog">
+				<div class="breadcrumbs">
+					<div class="breadcrumbs__container">
+						<ol itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li
+								itemprop="itemListElement"
+								itemscope
+								itemtype="https://schema.org/ListItem"
+							>
+								<a itemprop="item" href="№">
+									<span itemprop="name">Главная</span></a
+								>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li
+								itemprop="itemListElement"
+								itemscope
+								itemtype="https://schema.org/ListItem"
+							>
+								<a itemprop="item" href="№">
+									<span itemprop="name">Одежда</span></a
+								>
+								<meta itemprop="position" content="2" />
+							</li>
+							<li
+								itemprop="itemListElement"
+								itemscope
+								itemtype="https://schema.org/ListItem"
+							>
+								<a itemprop="item" href="№">
+									<span itemprop="name">Куртки</span></a
+								>
+								<meta itemprop="position" content="2" />
+							</li>
+							<li
+								itemprop="itemListElement"
+								itemscope
+								itemtype="https://schema.org/ListItem"
+							>
+								<a itemprop="item" href="№">
+									<span itemprop="name">Золотая парка с мехом енота</span></a
+								>
+								<meta itemprop="position" content="2" />
+							</li>
+						</ol>
+					</div>
+				</div>
+				<div class="catalog__container">
+					<h1 class="catalog__title">Свитера</h1>
+					<div class="catalog__sorting">
+						<div class="catalog__filter-open">
+							<img src="@img/icons/filter-open.svg" alt="filter-open" />
+						</div>
+						<select name="form[]" class="form">
+							<option value="1" selected>Новинки</option>
+							<option value="2">Цена по убыванию</option>
+							<option value="3">Цена по возрастанию</option>
+						</select>
+					</div>
+					<div class="catalog__wrapper">
+						<div data-sticky class="catalog__filter filter">
+							<div data-sticky-item class="filter__inner">
+								<div class="filter__close">
+									<img src="@img/icons/close.svg" alt="filter-close" />
+								</div>
+								<h2 class="filter__title">Фильтры</h2>
+								<button class="filter__reset _icon-filter">
+									Сбросить фильтры
+								</button>
+								<div class="filter__item">
+									<div class="filter__subtitle">Размер</div>
+									<div class="filter__body">
+										<select name="form[]" class="form">
+											<option value="" selected>Выбрать</option>
+											<option value="2">L</option>
+											<option value="3">XL</option>
+											<option value="4">XXL</option>
+										</select>
+									</div>
+								</div>
+								<div class="filter__item">
+									<div class="filter__subtitle">Сезон</div>
+									<div class="filter__body">
+										<select name="form[]" class="form">
+											<option value="" selected>Выбрать</option>
+											<option value="2">Лето</option>
+											<option value="3">Осень</option>
+											<option value="4">Зима</option>
+										</select>
+									</div>
+								</div>
+								<div class="filter__item">
+									<div class="filter__subtitle">Цвет</div>
+									<div class="filter__body">
+										<ul class="filter__color">
+											<li class="black _active"></li>
+											<li class="white"></li>
+											<li class="red"></li>
+											<li class="grey"></li>
+											<li class="green"></li>
+											<li class="creem"></li>
+											<li class="blue"></li>
+											<li class="yellow"></li>
+											<li class="lightblue"></li>
+											<li class="pink"></li>
+											<li class="purple"></li>
+											<li class="orange"></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="catalog__body">
+							<a href="#" class="catalog__item">
+								<div class="catalog__item-img">
+									<img src="@img/catalog/catalog1.png" alt="c1" />
+									<div class="catalog__item-hover">
+										<button type="button" class="catalog__item-hover--wishlist">
+											<svg
+												width="32"
+												height="30"
+												viewBox="0 0 32 30"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													fill-rule="evenodd"
+													clip-rule="evenodd"
+													d="M0 8.925C0 4.26218 3.81579 0.5 8.5 0.5C10.9189 0.5 13.0195 1.80175 14.4412 2.98008C15.0787 3.50848 15.6074 4.0351 16 4.45935C16.3926 4.0351 16.9213 3.50848 17.5588 2.98008C18.9805 1.80175 21.0811 0.5 23.5 0.5C28.1842 0.5 32 4.26218 32 8.925C32 10.7251 31.6398 13.6953 29.5952 17.2424C27.5538 20.7838 23.8649 24.8459 17.2917 28.8869L17.2878 28.8893C16.8997 29.1254 16.4542 29.2503 16 29.2503C15.5458 29.2503 15.1003 29.1254 14.7122 28.8893L14.7083 28.8869C8.13513 24.8459 4.44616 20.7838 2.40482 17.2424C0.360178 13.6953 0 10.7251 0 8.925ZM15.1986 6.59812L15.1945 6.59277L15.1716 6.56303C15.1502 6.53543 15.1165 6.49271 15.0713 6.43703C14.9808 6.32559 14.8444 6.16277 14.6671 5.96573C14.3114 5.57034 13.7972 5.04398 13.1649 4.51992C11.872 3.44825 10.2226 2.5 8.5 2.5C4.90121 2.5 2 5.38582 2 8.925C2 10.4354 2.29607 13.0489 4.13756 16.2436C5.98211 19.4436 9.40852 23.2806 15.7534 27.1817C15.8278 27.2266 15.9131 27.2503 16 27.2503C16.0869 27.2503 16.1722 27.2266 16.2466 27.1817C22.5915 23.2806 26.0179 19.4436 27.8624 16.2436C29.7039 13.0489 30 10.4354 30 8.925C30 5.38582 27.0988 2.5 23.5 2.5C21.7774 2.5 20.128 3.44825 18.8351 4.51992C18.2028 5.04398 17.6886 5.57034 17.3329 5.96573C17.1556 6.16277 17.0192 6.32559 16.9287 6.43703C16.8835 6.49271 16.8498 6.53543 16.8284 6.56303L16.8055 6.59277L16.8014 6.59812L16.8011 6.59853C16.6123 6.85119 16.3154 7 16 7C15.6846 7 15.3877 6.85119 15.1989 6.59853L15.1986 6.59812Z"
+													fill="#403D39"
+												/>
+											</svg>
+										</button>
+										<button type="button" class="catalog__item-hover--cart">
+											<svg
+												width="30"
+												height="32"
+												viewBox="0 0 30 32"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M2.96549 12.76C3.02583 12.0082 3.36712 11.3067 3.9214 10.7953C4.47568 10.2838 5.20228 9.99985 5.95649 10H24.0435C24.7977 9.99985 25.5243 10.2838 26.0786 10.7953C26.6329 11.3067 26.9742 12.0082 27.0345 12.76L28.239 27.76C28.2721 28.1728 28.2194 28.588 28.0842 28.9794C27.949 29.3708 27.7343 29.73 27.4534 30.0344C27.1726 30.3387 26.8318 30.5816 26.4525 30.7478C26.0732 30.914 25.6636 30.9999 25.2495 31H4.75049C4.33637 30.9999 3.92677 30.914 3.54746 30.7478C3.16815 30.5816 2.82736 30.3387 2.54653 30.0344C2.26571 29.73 2.05094 29.3708 1.91575 28.9794C1.78055 28.588 1.72786 28.1728 1.76099 27.76L2.96549 12.76V12.76Z"
+													stroke="#403D39"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												/>
+												<path
+													d="M21 14.5V7C21 5.4087 20.3679 3.88258 19.2426 2.75736C18.1174 1.63214 16.5913 1 15 1C13.4087 1 11.8826 1.63214 10.7574 2.75736C9.63214 3.88258 9 5.4087 9 7V14.5"
+													stroke="#403D39"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												/>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<h4 class="catalog__item-title">Свитер без ворота</h4>
+								<div class="catalog__item-price">
+									<div class="catalog__item-nowprice">5000₽</div>
+									<div class="catalog__item-oldprice">6000₽</div>
+								</div>
+								<div class="catalog__item-discount">-20%</div>
+							</a>
+							<a href="#" class="catalog__item">
+								<div class="catalog__item-img">
+									<img src="@img/catalog/catalog1.png" alt="c1" />
+									<div class="catalog__item-hover">
+										<button type="button" class="catalog__item-hover--wishlist">
+											<svg
+												width="32"
+												height="30"
+												viewBox="0 0 32 30"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													fill-rule="evenodd"
+													clip-rule="evenodd"
+													d="M0 8.925C0 4.26218 3.81579 0.5 8.5 0.5C10.9189 0.5 13.0195 1.80175 14.4412 2.98008C15.0787 3.50848 15.6074 4.0351 16 4.45935C16.3926 4.0351 16.9213 3.50848 17.5588 2.98008C18.9805 1.80175 21.0811 0.5 23.5 0.5C28.1842 0.5 32 4.26218 32 8.925C32 10.7251 31.6398 13.6953 29.5952 17.2424C27.5538 20.7838 23.8649 24.8459 17.2917 28.8869L17.2878 28.8893C16.8997 29.1254 16.4542 29.2503 16 29.2503C15.5458 29.2503 15.1003 29.1254 14.7122 28.8893L14.7083 28.8869C8.13513 24.8459 4.44616 20.7838 2.40482 17.2424C0.360178 13.6953 0 10.7251 0 8.925ZM15.1986 6.59812L15.1945 6.59277L15.1716 6.56303C15.1502 6.53543 15.1165 6.49271 15.0713 6.43703C14.9808 6.32559 14.8444 6.16277 14.6671 5.96573C14.3114 5.57034 13.7972 5.04398 13.1649 4.51992C11.872 3.44825 10.2226 2.5 8.5 2.5C4.90121 2.5 2 5.38582 2 8.925C2 10.4354 2.29607 13.0489 4.13756 16.2436C5.98211 19.4436 9.40852 23.2806 15.7534 27.1817C15.8278 27.2266 15.9131 27.2503 16 27.2503C16.0869 27.2503 16.1722 27.2266 16.2466 27.1817C22.5915 23.2806 26.0179 19.4436 27.8624 16.2436C29.7039 13.0489 30 10.4354 30 8.925C30 5.38582 27.0988 2.5 23.5 2.5C21.7774 2.5 20.128 3.44825 18.8351 4.51992C18.2028 5.04398 17.6886 5.57034 17.3329 5.96573C17.1556 6.16277 17.0192 6.32559 16.9287 6.43703C16.8835 6.49271 16.8498 6.53543 16.8284 6.56303L16.8055 6.59277L16.8014 6.59812L16.8011 6.59853C16.6123 6.85119 16.3154 7 16 7C15.6846 7 15.3877 6.85119 15.1989 6.59853L15.1986 6.59812Z"
+													fill="#403D39"
+												/>
+											</svg>
+										</button>
+										<button type="button" class="catalog__item-hover--cart">
+											<svg
+												width="30"
+												height="32"
+												viewBox="0 0 30 32"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M2.96549 12.76C3.02583 12.0082 3.36712 11.3067 3.9214 10.7953C4.47568 10.2838 5.20228 9.99985 5.95649 10H24.0435C24.7977 9.99985 25.5243 10.2838 26.0786 10.7953C26.6329 11.3067 26.9742 12.0082 27.0345 12.76L28.239 27.76C28.2721 28.1728 28.2194 28.588 28.0842 28.9794C27.949 29.3708 27.7343 29.73 27.4534 30.0344C27.1726 30.3387 26.8318 30.5816 26.4525 30.7478C26.0732 30.914 25.6636 30.9999 25.2495 31H4.75049C4.33637 30.9999 3.92677 30.914 3.54746 30.7478C3.16815 30.5816 2.82736 30.3387 2.54653 30.0344C2.26571 29.73 2.05094 29.3708 1.91575 28.9794C1.78055 28.588 1.72786 28.1728 1.76099 27.76L2.96549 12.76V12.76Z"
+													stroke="#403D39"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												/>
+												<path
+													d="M21 14.5V7C21 5.4087 20.3679 3.88258 19.2426 2.75736C18.1174 1.63214 16.5913 1 15 1C13.4087 1 11.8826 1.63214 10.7574 2.75736C9.63214 3.88258 9 5.4087 9 7V14.5"
+													stroke="#403D39"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												/>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<h4 class="catalog__item-title">Свитер без ворота</h4>
+								<div class="catalog__item-price">
+									<div class="catalog__item-oldprice">6000₽</div>
+								</div>
+								<div class="catalog__item-discount">-20%</div>
+							</a>
+						</div>
+					</div>
+					<div class="catalog__pagging">@@include('html/_pagging.htm',{})</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+	</body>
+</html>

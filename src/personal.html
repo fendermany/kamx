@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{ "title":"Каталог" })
+
+	<body id="up">
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page personal">
+				<div class="personal__container">
+					<div class="perosnal__breadcrumbs breadcrumbs">
+						<ol itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li
+								itemprop="itemListElement"
+								itemscope
+								itemtype="https://schema.org/ListItem"
+							>
+								<a itemprop="item" href="https://example.com/dresses">
+									<span itemprop="name">Dresses</span></a
+								>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li
+								itemprop="itemListElement"
+								itemscope
+								itemtype="https://schema.org/ListItem"
+							>
+								<a itemprop="item" href="https://example.com/dresses/real">
+									<span itemprop="name">Real Dresses</span></a
+								>
+								<meta itemprop="position" content="2" />
+							</li>
+						</ol>
+					</div>
+					<div class="personal__wrapper">
+						<aside class="personal__aside profile">
+							<div class="profile__img">
+								<img
+									class="_lazy"
+									data-src="@img/personal-area/avatar.svg"
+									alt="avatar"
+								/>
+							</div>
+							<div class="profile__name">Руслан Бекирович</div>
+							<ul class="profile__mainlist">
+								<li class="_active">
+									<svg
+										width="26"
+										height="26"
+										viewBox="0 0 26 26"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M3.08366 2.49984C2.76149 2.49984 2.50033 2.761 2.50033 3.08317V22.9165C2.50033 23.2387 2.76149 23.4998 3.08366 23.4998H22.917C23.2392 23.4998 23.5003 23.2387 23.5003 22.9165V3.08317C23.5003 2.761 23.2392 2.49984 22.917 2.49984H3.08366ZM0.166992 3.08317C0.166992 1.47234 1.47283 0.166504 3.08366 0.166504H22.917C24.5278 0.166504 25.8337 1.47234 25.8337 3.08317V22.9165C25.8337 24.5273 24.5278 25.8332 22.917 25.8332H3.08366C1.47283 25.8332 0.166992 24.5273 0.166992 22.9165V3.08317ZM4.83366 5.99984C4.83366 5.3555 5.35599 4.83317 6.00033 4.83317H10.667C11.3113 4.83317 11.8337 5.3555 11.8337 5.99984V10.6665C11.8337 11.3108 11.3113 11.8332 10.667 11.8332H6.00033C5.35599 11.8332 4.83366 11.3108 4.83366 10.6665V5.99984ZM7.16699 7.1665V9.49984H9.50033V7.1665H7.16699ZM14.167 5.99984C14.167 5.3555 14.6893 4.83317 15.3337 4.83317H20.0003C20.6447 4.83317 21.167 5.3555 21.167 5.99984C21.167 6.64417 20.6447 7.1665 20.0003 7.1665H15.3337C14.6893 7.1665 14.167 6.64417 14.167 5.99984ZM14.167 10.6665C14.167 10.0222 14.6893 9.49984 15.3337 9.49984H20.0003C20.6447 9.49984 21.167 10.0222 21.167 10.6665C21.167 11.3108 20.6447 11.8332 20.0003 11.8332H15.3337C14.6893 11.8332 14.167 11.3108 14.167 10.6665ZM4.83366 15.3332C4.83366 14.6888 5.35599 14.1665 6.00033 14.1665H10.667C11.3113 14.1665 11.8337 14.6888 11.8337 15.3332V19.9998C11.8337 20.6442 11.3113 21.1665 10.667 21.1665H6.00033C5.35599 21.1665 4.83366 20.6442 4.83366 19.9998V15.3332ZM7.16699 16.4998V18.8332H9.50033V16.4998H7.16699ZM14.167 15.3332C14.167 14.6888 14.6893 14.1665 15.3337 14.1665H20.0003C20.6447 14.1665 21.167 14.6888 21.167 15.3332C21.167 15.9775 20.6447 16.4998 20.0003 16.4998H15.3337C14.6893 16.4998 14.167 15.9775 14.167 15.3332ZM14.167 19.9998C14.167 19.3555 14.6893 18.8332 15.3337 18.8332H20.0003C20.6447 18.8332 21.167 19.3555 21.167 19.9998C21.167 20.6442 20.6447 21.1665 20.0003 21.1665H15.3337C14.6893 21.1665 14.167 20.6442 14.167 19.9998Z"
+											fill="#A6ABB3"
+										/>
+									</svg>
+
+									<a href="javascript:">Мои заказы</a>
+								</li>
+								<li>
+									<svg
+										width="26"
+										height="20"
+										viewBox="0 0 26 20"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M24.667 0.0834961C24.8404 0.0869921 25.0048 0.118684 25.1691 0.196801C25.3385 0.277821 25.4876 0.399894 25.6003 0.550163C25.6743 0.660288 25.657 0.627241 25.6003 0.550163C25.7514 0.751649 25.8337 0.998365 25.8337 1.25016C25.8332 1.18802 25.8307 1.16105 25.8337 1.25016V18.7502C25.8337 19.3945 25.3113 19.9168 24.667 19.9168H1.33366C0.689327 19.9168 0.166992 19.3945 0.166992 18.7502V1.25016C0.166992 1.0413 0.223653 0.833905 0.330237 0.654777C0.547434 0.288805 0.92364 0.0917625 1.33366 0.0834961H24.667ZM23.5003 3.5835L13.7003 10.9335C13.327 11.2135 12.8277 11.2415 12.4291 11.0175L12.3003 10.9335L2.50033 3.5835V17.5835H23.5003V3.5835ZM4.83366 2.41683L13.0003 8.54183L21.167 2.41683H4.83366Z"
+											fill="#A6ABB3"
+										/>
+									</svg>
+
+									<a href="javascript:">Моя корзина</a>
+								</li>
+								<li>
+									<svg
+										width="22"
+										height="20"
+										viewBox="0 0 22 20"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M0 6.5C0 2.91017 2.91015 0 6.5 0C8.24701 0 9.83288 0.689818 11 1.80968C12.1671 0.689818 13.753 0 15.5 0C19.0898 0 22 2.91017 22 6.5C22 9.63412 20.164 12.4994 18.0231 14.6615C15.8724 16.8335 13.2421 18.4718 11.3154 19.1121C11.1106 19.1801 10.8894 19.1801 10.6846 19.1121C8.75788 18.4718 6.12761 16.8335 3.97692 14.6615C1.83596 12.4994 0 9.63412 0 6.5ZM6.5 2C4.01472 2 2 4.01473 2 6.5C2 8.86588 3.41404 11.2506 5.39808 13.2543C7.24453 15.119 9.43684 16.5021 11 17.1011C12.5632 16.5021 14.7555 15.119 16.6019 13.2543C18.586 11.2506 20 8.86588 20 6.5C20 4.01473 17.9853 2 15.5 2C13.9789 2 12.6337 2.75379 11.8176 3.91266C11.6303 4.17865 11.3253 4.3369 11 4.3369C10.6747 4.3369 10.3697 4.17865 10.1824 3.91266C9.36631 2.75379 8.02112 2 6.5 2Z"
+											fill="#A6ABB3"
+										/>
+									</svg>
+
+									<a href="javascript:">Избранное</a>
+								</li>
+							</ul>
+							<ul class="profile__secondlist">
+								<li><a href="javascript:">Настройки</a></li>
+								<li><a href="javascript:">Написать нам</a></li>
+								<li><a href="javascript:">Выйти</a></li>
+							</ul>
+							<a href="javascript:" class="profile__policy"
+								>Политика конфиденциальности</a
+							>
+							<a href="javascript:" class="profile__terms"
+								>Пользовательское соглашение</a
+							>
+						</aside>
+						<div class="personal__body">
+							<h1 class="personal__title">Все заказы</h1>
+							<div data-tabs class="personal__tabs">
+								<nav class="personal__tabs-navigation">
+									<div data-tabs-titles class="personal__tabs-inner">
+										<button
+											type="button"
+											class="personal__tabs-title _tab-active"
+										>
+											Все заказы
+										</button>
+										<button type="button" class="personal__tabs-title">
+											Неоплаченные
+										</button>
+										<button type="button" class="personal__tabs-title">
+											Активные
+										</button>
+									</div>
+								</nav>
+								<div data-tabs-body class="personal__tabs-content">
+									<div class="personal__tabs-body personal__all">
+										<ul class="personal__list">
+											<li class="personal__item">
+												<div class="personal__item-title">
+													ID заказа 2647494
+												</div>
+												<table class="personal__table">
+													<tbody>
+														<tr>
+															<td>Статус:</td>
+															<td>
+																<span class="personal__table-status"
+																	>Выдан покупателю</span
+																><span class="personal__table-update"
+																	>Обновлен 10 февраля 2022г. 17:02</span
+																>
+															</td>
+														</tr>
+														<tr>
+															<td>Дата заказа:</td>
+															<td>Четверг, 10 февраля 2022 г., 09:34</td>
+														</tr>
+														<tr>
+															<td>Дата доставки:</td>
+															<td>Четверг, 10 февраля</td>
+														</tr>
+														<tr>
+															<td>Пункт выдачи:</td>
+															<td>г. Москва, улица Петербургская, дом №52</td>
+														</tr>
+														<tr>
+															<td>Сумма заказа:</td>
+															<td>10 975 ₽</td>
+														</tr>
+													</tbody>
+												</table>
+												<div data-spollers class="personal__prodlist">
+													<button
+														type="button"
+														data-spoller
+														class="personal__prodlist-title _icon-arrow-down"
+													>
+														<span>4 товара</span>
+													</button>
+													<div class="personal__prodlist-body">Товары</div>
+												</div>
+											</li>
+											<li class="personal__item">
+												<div class="personal__item-title">
+													ID заказа 2647494
+												</div>
+												<table class="personal__table">
+													<tbody>
+														<tr>
+															<td>Статус:</td>
+															<td>
+																<span class="personal__table-status"
+																	>Выдан покупателю</span
+																><span class="personal__table-update"
+																	>Обновлен 10 февраля 2022г. 17:02</span
+																>
+															</td>
+														</tr>
+														<tr>
+															<td>Дата заказа:</td>
+															<td>Четверг, 10 февраля 2022 г., 09:34</td>
+														</tr>
+														<tr>
+															<td>Дата доставки:</td>
+															<td>Четверг, 10 февраля</td>
+														</tr>
+														<tr>
+															<td>Пункт выдачи:</td>
+															<td>г. Москва, улица Петербургская, дом №52</td>
+														</tr>
+														<tr>
+															<td>Сумма заказа:</td>
+															<td>10 975 ₽</td>
+														</tr>
+													</tbody>
+												</table>
+												<div data-spollers class="personal__prodlist">
+													<button
+														type="button"
+														data-spoller
+														class="personal__prodlist-title _icon-arrow-down"
+													>
+														<span>4 товара</span>
+													</button>
+													<div class="personal__prodlist-body">Товары</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="personal__tabs-body personal__unpaid">
+										<div class="personal__empty">
+											<div class="personal__empty-title">Здесь пусто :(</div>
+											<div class="personal__empty-descr">
+												У вас отсутствуют неоплаченные заказы! Воспользуйтесь
+												поиском, чтобы найти всё что нужно
+											</div>
+											<a
+												href="javascript:"
+												class="personal__empty-btn btn btn_green"
+												>Начать покупки</a
+											>
+											<a class="personal__empty-backtohome" href="/"
+												>Вернуться на главную</a
+											>
+										</div>
+									</div>
+									<div class="personal__tabs-body personal__active"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+	</body>
+</html>

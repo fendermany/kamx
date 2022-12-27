@@ -1,0 +1,38 @@
+// Заголовки, общие БЄМ блоки и проче...
+.sticky {
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	background: $white !important;
+}
+
+.btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background: $orange;
+	color: $white;
+	border-radius: 2px;
+	height: 45px;
+	padding: 0 20px;
+	width: max-content;
+	margin-top: 10px;
+	@media (any-hover: hover) {
+		&:hover {
+			background: #fff;
+			color: $orange;
+			outline: 1px solid $orange;
+		}
+	}
+	&:active,
+	&:focus {
+		background: #fff;
+		color: $orange;
+		outline: 1px solid $orange;
+	}
+	&._fw {
+		width: 100%;
+	}
+}

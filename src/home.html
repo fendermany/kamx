@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{ "title":"Главная" })
+	<body id="up">
+		<div class="wrapper home">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<div class="home__slider swiper">
+					<div class="home__wrapper swiper-wrapper">
+						<div class="home__slide swiper-slide -ibg">
+							<img data-src="@img/slider.png" alt="slide" />
+							<div class="__container">
+								<div class="home__slide-title">Бутик «КамЭКС»</div>
+								<div class="home__slide-descr">
+									Стильная одежда для мужчин на каждый день
+								</div>
+							</div>
+						</div>
+						<div class="home__slide swiper-slide -ibg">
+							<img
+								src="https://api.roi.ee/storage/category/riided-2.webp"
+								alt="slide"
+							/>
+							<div class="__container">
+								<div class="home__slide-title">Второй слайд</div>
+								<div class="home__slide-descr">Второй описание</div>
+							</div>
+						</div>
+					</div>
+					<div class="home__slider-pagination"></div>
+				</div>
+				<div class="home__categories categories">
+					<div class="categories__container">
+						<h2 class="categories__title">Категории товаров</h2>
+						<div class="categories__body">
+							<a href="#" class="_lazy categories__item -ibg">
+								<img data-src="@img/category/category1.png" alt="cat1" />
+								<h3 class="categories__subtitle">Куртки</h3>
+							</a>
+							<a href="#" class="_lazy categories__item -ibg">
+								<img data-src="@img/category/category2.png" alt="cat2" />
+								<h3 class="categories__subtitle">Брюки и джинсы</h3>
+							</a>
+							<a href="#" class="_lazy categories__item -ibg">
+								<img data-src="@img/category/category3.png" alt="cat3" />
+								<h3 class="categories__subtitle">Свитера</h3>
+							</a>
+							<a href="#" class="_lazy categories__item -ibg">
+								<img data-src="@img/category/category4.png" alt="cat4" />
+								<h3 class="categories__subtitle">Рубашки</h3>
+							</a>
+							<a href="#" class="_lazy categories__item -ibg">
+								<img data-src="@img/category/category5.png" alt="cat5" />
+								<h3 class="categories__subtitle">Обувь</h3>
+							</a>
+							<a href="#" class="_lazy categories__item -ibg">
+								<img data-src="@img/category/category6.png" alt="cat6" />
+								<h3 class="categories__subtitle">Пиджаки и костюмы</h3>
+							</a>
+							<a href="#" class="_lazy categories__item -ibg">
+								<img data-src="@img/category/category7.png" alt="cat7" />
+								<h3 class="categories__subtitle">Аксессуары</h3>
+							</a>
+							<a href="#" class="_lazy categories__item -ibg">
+								<img data-src="@img/category/category8.png" alt="cat8" />
+								<h3 class="categories__subtitle">Толстовки</h3>
+							</a>
+							<a href="#" class="_lazy categories__item -ibg">
+								<img data-src="@img/category/category9.png" alt="cat9" />
+								<h3 class="categories__subtitle">Подарки</h3>
+							</a>
+							<a href="#" class="_lazy categories__item -ibg">
+								<img data-src="@img/category/category10.png" alt="cat10" />
+								<h3 class="categories__subtitle">Белье</h3>
+							</a>
+							<a href="#" class="_lazy categories__item -ibg">
+								<img data-src="@img/category/category11.png" alt="cat11" />
+								<h3 class="categories__subtitle">Футболки</h3>
+							</a>
+							<a href="#" class="_lazy categories__item -ibg">
+								<img data-src="@img/category/category12.png" alt="cat12" />
+								<h3 class="categories__subtitle">Красота</h3>
+							</a>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+	</body>
+</html>

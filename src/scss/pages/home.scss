@@ -1,0 +1,232 @@
+.home {
+	/* .home__slider */
+	&__slider {
+		height: 534px;
+		color: #fffcf2;
+		position: relative;
+		@media (min-width: $mobile) {
+			padding-top: 0;
+		}
+		.__container {
+			width: 100%;
+		}
+	}
+	/* .home__wrapper */
+	&__wrapper {
+	}
+	/* .home__slide */
+	&__slide {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		img {
+			z-index: -1;
+			filter: brightness(80%);
+		}
+	}
+	/* .home__slide-title */
+	&__slide-title {
+		@include adaptiveValue('font-size', 48, 32);
+		@include adaptiveValue('line-height', 59, 39);
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	/* .home__slide-descr */
+	&__slide-descr {
+		font-weight: 500;
+		@include adaptiveValue('font-size', 36, 24);
+		@include adaptiveValue('line-height', 44, 30);
+	}
+	&__slider-pagination {
+		position: absolute;
+		bottom: 14px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: auto;
+		display: flex;
+		align-items: center;
+		& > * + * {
+			margin-left: 10px;
+		}
+
+		.swiper-pagination-bullet {
+			border-radius: 50%;
+			width: 6px;
+			display: block;
+			height: 6px;
+			background: #e4e4e4;
+			opacity: 0.5;
+			&-active {
+				background: $white;
+				box-shadow: 0 0 10px $white;
+				opacity: 1;
+			}
+		}
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+}
+
+.home {
+	/* .home__categories */
+	&__categories {
+	}
+	.header {
+		background: transparent;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 100;
+		@media (min-width: $mobile) {
+			position: static;
+			background: $white;
+		}
+		&__logo {
+			color: $white;
+			@media (min-width: $mobile) {
+				color: $mainColor;
+			}
+		}
+		&__icons {
+			& > * {
+				&::before {
+					color: $white;
+					@media (min-width: $mobile) {
+						color: $mainColor;
+					}
+				}
+			}
+		}
+		&__basket {
+			svg {
+				path {
+					stroke: $white;
+					@media (min-width: $mobile) {
+						stroke: $mainColor;
+					}
+				}
+			}
+		}
+		&.sticky {
+			.header__logo {
+				color: $mainColor;
+			}
+			.header__icons {
+				& > * {
+					&::before {
+						color: $mainColor;
+					}
+				}
+			}
+			.header__basket {
+				svg {
+					path {
+						stroke: $mainColor;
+					}
+				}
+			}
+			.icon-menu {
+				span,
+				&::before,
+				&::after {
+					background-color: $mainColor;
+				}
+			}
+			.search {
+				&__open {
+					svg {
+						path {
+							fill: $mainColor;
+						}
+					}
+				}
+			}
+		}
+	}
+	.search {
+		&__open {
+			svg {
+				path {
+					fill: $white;
+					@media (min-width: $mobile) {
+						fill: $mainColor;
+					}
+				}
+			}
+		}
+	}
+	.icon-menu {
+		span,
+		&::before,
+		&::after {
+			background-color: $white;
+		}
+	}
+}
+.categories {
+	@include adaptiveValue('padding-top', 103, 40);
+	/* .categories__title */
+	&__title {
+		font-weight: 600;
+		@include adaptiveValue('font-size', 48, 32);
+		line-height: 100%;
+		text-align: center;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: #eb5e28;
+	}
+	/* .categories__body */
+	&__body {
+		margin-top: 32px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		@include adaptiveValue('grid-template-rows', 395, 200);
+		@include adaptiveValue('grid-auto-rows', 395, 200);
+		@include adaptiveValue('column-gap', 30, 10);
+		@include adaptiveValue('row-gap', 50, 20);
+		@media (min-width: $mobile) {
+			grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+			grid-template-rows: 395px !important;
+			grid-auto-rows: 395px !important;
+		}
+	}
+	/* .categories__item */
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include adaptiveValue('padding', 20, 10);
+		img {
+			object-position: center top;
+			background: #403d39;
+			filter: brightness(80%);
+			z-index: -1;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				img {
+					filter: brightness(60%);
+				}
+			}
+		}
+		&:active,
+		&:focus {
+			img {
+				filter: brightness(60%);
+			}
+		}
+	}
+	/* .categories__subtitle */
+	&__subtitle {
+		font-weight: 600;
+		@include adaptiveValue('font-size', 36, 16);
+		@include adaptiveValue('line-height', 44, 22);
+		color: #fffdf8;
+		text-align: center;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+	}
+}

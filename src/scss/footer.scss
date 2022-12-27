@@ -1,0 +1,174 @@
+//====================================================================================================
+.footer {
+	@include adaptiveValue('margin-top', 163, 80);
+	background: $mainColor;
+	color: #fffdf8;
+	@include adaptiveValue('padding-top', 100, 40);
+	@include adaptiveValue('padding-bottom', 100, 40);
+	/* .footer__container */
+	&__container {
+	}
+
+	&__wrapper {
+		@include adaptiveValue('padding-top', 62, 30);
+		display: flex;
+		flex-wrap: wrap;
+		@include adaptiveValue('font-size', 22, 18);
+		@include adaptiveValue('line-height', 27, 23);
+		& > * {
+			margin-right: 40px;
+			margin-bottom: 40px;
+		}
+	}
+	/* .footer__copyright */
+	&__copyright {
+		font-weight: 400;
+		@include adaptiveValue('font-size', 18, 14);
+		@include adaptiveValue('line-height', 24, 18);
+	}
+	/* .footer__row */
+	&__body {
+		display: grid;
+		grid-template: auto auto / 1fr;
+		gap: 30px;
+		justify-content: space-between;
+		& > * {
+			max-width: 420px;
+			& > span {
+				margin-top: 24px;
+				display: block;
+			}
+		}
+		@media (min-width: $tablet) {
+			grid-auto-flow: column;
+			grid-template: auto auto / 1fr 1fr;
+		}
+	}
+	/* .footer__column-title */
+	&__title {
+		font-weight: 500;
+		@include adaptiveValue('font-size', 24, 18);
+		@include adaptiveValue('line-height', 29, 24);
+		text-transform: uppercase;
+	}
+	/* .footer__social */
+	&__social-list {
+		margin-top: 25px;
+	}
+	/* .footer__email */
+	&__email {
+		display: flex;
+		align-items: center;
+		&::before {
+			margin-right: 12px;
+			@include adaptiveValue('font-size', 32, 24);
+			color: $orange;
+		}
+	}
+	/* .footer__phone */
+	&__phone {
+		margin-top: 18px;
+		display: flex;
+		align-items: center;
+		&::before {
+			margin-right: 12px;
+			@include adaptiveValue('font-size', 32, 24);
+			color: $orange;
+		}
+	}
+	/* .footer__available */
+	&__available {
+		margin-top: 7px;
+	}
+	/* .footer__working */
+	&__working {
+	}
+	/* .footer__column-subtitle */
+	&__column-subtitle {
+		margin-top: 30px;
+	}
+	/* .footer__address */
+	&__address {
+	}
+	/* .footer__menu */
+	&__menu {
+		font-weight: 600;
+		font-size: 24px;
+		li + li {
+			@include adaptiveValue('margin-top', 34, 17);
+		}
+		li {
+			@media (any-hover: hover) {
+				&:hover {
+					color: $orange;
+				}
+			}
+			&:active,
+			&:focus {
+				color: $orange;
+			}
+		}
+	}
+}
+.social {
+	display: flex;
+	align-items: center;
+	& > * + * {
+		margin-left: 20px;
+	}
+	a {
+		&::before {
+			font-size: 32px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					color: $orange;
+				}
+			}
+		}
+		&:active,
+		&:focus {
+			&::before {
+				color: $orange;
+			}
+		}
+	}
+}
+
+.email {
+	@media (any-hover: hover) {
+		&:hover {
+			color: $orange;
+		}
+	}
+	&:active,
+	&:focus {
+		color: $orange;
+	}
+}
+.phone {
+	@media (any-hover: hover) {
+		&:hover {
+			color: $orange;
+		}
+	}
+	&:active,
+	&:focus {
+		color: $orange;
+	}
+}
+.pageup {
+	visibility: hidden;
+	position: fixed;
+	font-size: 33px;
+	color: $orange;
+	bottom: 53px;
+	right: 20px;
+	z-index: 1000;
+	@media (min-width: $pc) {
+		right: 53px;
+	}
+}
+
+//====================================================================================================

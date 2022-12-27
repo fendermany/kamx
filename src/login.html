@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{ "title":"Личный кабинет" })
+	<body id="up">
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page login">
+				<div class="login__container">
+					<h1 class="login__title">Вход в личный кабинет</h1>
+					<div class="popauth__logo">
+						<img src="@img/logo.png" alt="logo" />
+					</div>
+					<div class="popauth__descr">
+						Зарегистрируйтесь и начните совершать умные покупки на
+						<span>Kamx.shop</span>
+					</div>
+					<div data-tabs class="popauth__tabs">
+						<nav data-tabs-titles class="popauth__tabs-navigation">
+							<button type="button" class="popauth__tabs-title _tab-active">
+								Регистрация
+							</button>
+							<button type="button" class="popauth__tabs-title auth-title">
+								Вход <span>в личный кабинет</span>
+							</button>
+						</nav>
+						<div data-tabs-body class="popauth__tabs-content">
+							<div class="popauth__tabs-body popauth__reg reg">
+								<div class="reg__title">Регистрация</div>
+								<div class="reg__descr">
+									Зарегистрируйтесь и начните совершать умные покупки на o2aqua
+								</div>
+								<form class="reg__form" action="#">
+									<div class="form__line">
+										<label for="login">Номер телефона</label>
+										<input
+											data-required
+											autocomplete="off"
+											type="text"
+											name="phone"
+											data-error="Заполните поле"
+											placeholder="+7"
+											class="input"
+										/>
+									</div>
+									<div class="form__line">
+										<label for="name">Имя</label>
+										<input
+											autocomplete="off"
+											type="text"
+											name="name"
+											data-error="Заполните поле"
+											placeholder=""
+											class="input"
+										/>
+									</div>
+									<div class="form__line">
+										<label for="pw">Пароль</label>
+										<input
+											data-required
+											autocomplete="off"
+											type="password"
+											name="pw"
+											data-error="Введите пароль"
+											placeholder=""
+											class="input"
+										/>
+									</div>
+									<ul class="reg__inner">
+										<li class="_icon-ok">Не менее 8 символов</li>
+										<li class="_icon-ok">Состоит из цифр и латинских букв</li>
+										<li class="_icon-ok">
+											Содержит строчные и заглавные буквы
+										</li>
+									</ul>
+									<button type="submit" class="reg__submit btn btn_green">
+										Зарегистрироваться
+									</button>
+									<div class="reg__policy">
+										Нажимая кнопку “Регистрация”, Вы соглашаетесь на обработку
+										персональных данных в соответствии с
+										<a href="javascript:">Условиями</a>.
+									</div>
+								</form>
+							</div>
+							<div class="popauth__tabs-body popauth__signin signin">
+								<div class="signin__title">Авторизация</div>
+								<div class="signin__descr">
+									Авторизация на <span>Kamx.shop</span> поможет вам совершать
+									покупки, добавлять понравившиеся товары в избранное и получать
+									бонусы.
+								</div>
+								<form class="signin__form" action="#">
+									<div class="form__line">
+										<label for="login">E-mail или телефон</label>
+										<input
+											data-required
+											autocomplete="off"
+											type="text"
+											name="login"
+											data-error="Заполните поле"
+											placeholder="+7"
+											class="input"
+										/>
+									</div>
+									<div class="form__line">
+										<label for="pw">Пароль</label>
+										<input
+											data-required
+											autocomplete="off"
+											type="password"
+											name="pw"
+											data-error="Введите пароль"
+											placeholder=""
+											class="input"
+										/>
+									</div>
+									<div class="signin__inner">
+										<div class="signin__rememberme checkbox">
+											<input
+												id="rememberme"
+												data-error="Ошибка"
+												class="checkbox__input"
+												type="checkbox"
+												value="1"
+												name="form[]"
+											/>
+											<label for="rememberme" class="checkbox__label"
+												><span class="checkbox__text"
+													>Запомнить меня</span
+												></label
+											>
+										</div>
+										<button type="btn" class="signin__remindpass btn">
+											Напомнить пароль
+										</button>
+									</div>
+									<button class="signin__submit btn btn_green">Войти</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+	</body>
+</html>

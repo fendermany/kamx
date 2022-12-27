@@ -1,0 +1,65 @@
+%ic {
+	font-family: 'icons';
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*='_icon-'] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-arrow-down:before {
+	content: '\e900';
+}
+._icon-arrow-right:before {
+	content: '\e901';
+}
+._icon-auth:before {
+	content: '\e902';
+}
+._icon-cart:before {
+	content: '\e903';
+}
+._icon-email:before {
+	content: '\e904';
+}
+._icon-facebook:before {
+	content: '\e905';
+}
+._icon-filter:before {
+	content: '\e906';
+}
+._icon-instagram:before {
+	content: '\e907';
+}
+._icon-minus:before {
+	content: '\e908';
+}
+._icon-pageup:before {
+	content: '\e909';
+}
+._icon-phone:before {
+	content: '\e90a';
+}
+._icon-plus:before {
+	content: '\e90b';
+}
+._icon-refresh:before {
+	content: '\e90c';
+}
+._icon-sort:before {
+	content: '\e90d';
+}
+._icon-wishlist:before {
+	content: '\e90e';
+}
+._icon-youtube:before {
+	content: '\e90f';
+}
